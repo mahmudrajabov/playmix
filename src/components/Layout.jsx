@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import MusicMiniPlayer from "./MusicMiniPlayer";
+import Footer from "./Footer";
 import GlobalSearch from "./GlobalSearch";
 import { MusicProvider } from "@/lib/MusicContext";
 
@@ -26,6 +27,7 @@ export default function Layout() {
           <Outlet context={{ openSearch: () => setSearchOpen(true) }} />
         </main>
         <MusicMiniPlayer />
+        <Footer />
         {searchOpen && <GlobalSearch onClose={() => setSearchOpen(false)} />}
       </div>
     </MusicProvider>

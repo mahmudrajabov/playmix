@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Search, Menu, X, Gamepad2, Music, Images, Film, Heart, Home } from "lucide-react";
+import BrandLogo from "@/components/BrandLogo";
 
 const iconMap = {
   Home,
@@ -25,10 +26,7 @@ export default function Navbar({ navItems, onOpenSearch, currentPath }) {
       <header className="glass-header fixed top-0 inset-x-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center gap-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 shrink-0">
-            <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-neon-purple via-neon-blue to-neon-pink flex items-center justify-center text-white font-bold text-sm font-display">P</span>
-            <span className="font-display font-bold text-xl tracking-tight">Play<span className="text-gradient">Mix</span></span>
-          </Link>
+          <BrandLogo />
 
           {/* Desktop nav rail */}
           <nav className="hidden md:flex items-center gap-1 ml-4">
